@@ -67,7 +67,7 @@ export class CustomExceptionFilter implements ExceptionFilter {
           found ||
           (line.includes('\\src\\') ? `src${line.split('src')[1]}` : null),
         null,
-      ) || 'Arquivo do erro não identificado';
+      ) || 'Could not determine error location';
 
     const errorResponse = {
       statusCode: status,
